@@ -5,7 +5,7 @@ adivinado = True
 def ingreso_input ():
     ingreso = input('\nIngresa el numero que estoy pensando del 1 al 100: ')
     if ingreso.isdigit():
-            return int(ingreso)
+        return int(ingreso)
     else:
         print('no letras')
         return
