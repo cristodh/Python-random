@@ -51,7 +51,7 @@ def main():
     print("TODOS LOS LIBROS EN LA BIBLIOTECA:")
     biblioteca.mostrar_todos_los_libros()
     
-    print("\n=== FIN DE LA DEMOSTRACIÓN ===")
+    print("\n=== FIN DEL PROGRAMA ===")
 
 # Ejecutar la función principal si este archivo se ejecuta directamente
 if __name__ == "__main__":
