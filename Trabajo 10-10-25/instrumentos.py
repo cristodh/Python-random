@@ -4,6 +4,7 @@ class Instrumento:
         self.tipo = tipo  # si es de cuerda, percusion, aire, etc
         self.material = material
         self.afinado = afinado  #si o no
+        
 
 #accion de tocar
     def tocar(self):
