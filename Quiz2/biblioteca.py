@@ -1,5 +1,5 @@
-class Libro:
-    """Clase padre para representar un libro"""
+"""Esta es la clase padre para representar un libro"""
+class Libro: 
     
     def __init__(self, titulo, autor, anio, disponible=True):
         self.titulo = titulo
@@ -8,7 +8,7 @@ class Libro:
         self.disponible = disponible
     
     def mostrar_info(self):
-        """Muestra los datos del libro"""
+        """aqui se muestra la info del libro"""
         estado = "Disponible" if self.disponible else "No disponible"
         print(f"Título: {self.titulo}")
         print(f"Autor: {self.autor}")
@@ -16,7 +16,7 @@ class Libro:
         print(f"Estado: {estado}")
     
     def alquilar(self):
-        """Cambia disponible a False"""
+        """Aqui se cambia de disponible a alquilado usando el False"""
         if self.disponible:
             self.disponible = False
             print(f"El libro '{self.titulo}' ha sido alquilado.")
@@ -26,7 +26,7 @@ class Libro:
             return False
     
     def devolver(self):
-        """Cambia disponible a True"""
+        """Aqui mas bien cambia a disponible con un True"""
         if not self.disponible:
             self.disponible = True
             print(f"El libro '{self.titulo}' ha sido devuelto.")
@@ -37,7 +37,7 @@ class Libro:
 
 
 class LibroImpreso(Libro):
-    """Clase hija para libros impresos"""
+    """Libros Impresos"""
     
     def __init__(self, titulo, autor, anio, num_paginas, disponible=True):
         super().__init__(titulo, autor, anio, disponible)
@@ -51,7 +51,7 @@ class LibroImpreso(Libro):
 
 
 class LibroDigital(Libro):
-    """Clase hija para libros digitales"""
+    """Libro Digital"""
     
     def __init__(self, titulo, autor, anio, tamano_mb, disponible=True):
         super().__init__(titulo, autor, anio, disponible)
@@ -86,6 +86,9 @@ class Biblioteca:
             return
         
         for i, libro in enumerate(libros_disponibles, 1):
+            # i = número automatico (1, 2, 3, ...)
+            # libro = el objeto libro actual
+            # enumerate = se usa para obtener tanto el índice como el valor de cada elemento en una secuencia
             print(f"\n{i}. {libro.titulo}")
             libro.mostrar_info()
             print("-" * 40)
